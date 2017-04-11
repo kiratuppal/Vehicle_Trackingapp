@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road2"
+
+    tools:context="com.example.lenovo.vehicle_trackingapp.start_page">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#592effe7"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape6"
+        android:text="Sign In as Admin"
+        android:padding="30dp"
+        android:layout_centerInParent="true"
+        android:textColor="#fff"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/asadmin"
+        android:onClick="goto_admin"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape6"
+        android:text="Sign In as Driver"
+        android:padding="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_below="@id/asadmin"
+        android:layout_centerHorizontal="true"
+        android:onClick="goto_user"
+        />
+
+
+
+
+</RelativeLayout>
+

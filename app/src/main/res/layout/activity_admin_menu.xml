@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_admin_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#e1485f"
+    tools:context="com.example.lenovo.vehicle_trackingapp.admin_menu"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome !"
+        android:textColor="#fff"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/welcme"/>
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/welcme"
+        android:src="@drawable/drive"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/drive_img"
+        android:onClick="goto_driver"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drive_img"
+        android:text="Drivers"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/driver"
+        />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+       android:layout_toRightOf="@+id/drive_img"
+        android:src="@drawable/maps1"
+        android:layout_below="@id/welcme"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/mapimage"
+        android:onClick="goto_maps"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapimage"
+        android:text="Locations"
+        android:layout_toRightOf="@id/driver"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_marginLeft="30dp"/>
+<ImageView
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_toRightOf="@+id/mapimage"
+    android:src="@drawable/fuelcounter"
+    android:layout_below="@id/welcme"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="40dp"
+    android:id="@+id/fuelimage"
+    android:onClick="goto_fueldetails"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapimage"
+        android:text="Fuel Details"
+        android:layout_toRightOf="@id/mapimage"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_marginLeft="30dp"/>
+
+    <ImageView
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:src="@drawable/tool"
+    android:layout_below="@id/driver"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="40dp"
+    android:id="@+id/servicetool"
+        android:onClick="goto_service"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/servicetool"
+        android:text="Service"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/serviceimage"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/distances"
+        android:layout_below="@id/driver"
+        android:layout_toRightOf="@id/servicetool"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/distance"
+        android:onClick="goto_distance"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distance"
+        android:layout_toRightOf="@id/serviceimage"
+        android:text="Distances"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/distravel"/>
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/manuser"
+        android:layout_below="@id/driver"
+        android:layout_toRightOf="@id/distance"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/userprofile"
+        android:onClick="goto_profile"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userprofile"
+        android:layout_toRightOf="@id/distravel"
+        android:text="Profile"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/myprofile"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_below="@id/distravel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape4"
+        android:textColor="#fff"
+        android:onClick="goto_logout"/>
+</RelativeLayout>

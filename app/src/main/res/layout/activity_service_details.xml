@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_service_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/tools"
+    tools:context="com.example.lenovo.vehicle_trackingapp.service_details"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5b000000"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Maintenance"
+        android:textSize="40dp"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+       android:gravity="center_horizontal"
+        android:id="@+id/service"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        android:layout_below="@+id/service"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Vehicle No."
+        android:textSize="20dp"
+        android:background="@null"
+        android:id="@+id/Vnum"/>
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#fff"
+        android:layout_below="@+id/Vnum"
+        android:id="@+id/view3"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        android:layout_below="@+id/view3"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Bill No."
+        android:textSize="20dp"
+        android:background="@null"
+        android:id="@+id/Bno"
+        />
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#fff"
+        android:layout_below="@+id/Bno"
+        android:id="@+id/view4"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        android:layout_below="@+id/view4"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Amount"
+        android:textSize="20dp"
+        android:background="@null"
+        android:id="@+id/amt2"/>
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#fff"
+        android:layout_below="@+id/amt2"
+        android:id="@+id/view5"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        android:layout_below="@+id/view5"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Service"
+        android:textSize="20dp"
+        android:background="@null"
+        android:id="@+id/service_det"/>
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#fff"
+        android:layout_below="@+id/service_det"
+        android:id="@+id/view6"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        android:layout_below="@+id/view6"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Date"
+        android:textSize="20dp"
+        android:background="@null"
+        android:id="@+id/date2"/>
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#fff"
+        android:layout_below="@+id/date2"
+        android:id="@+id/view7"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:layout_below="@id/view7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="ser_details"
+        android:background="@drawable/shape1"
+        />
+
+
+
+
+</RelativeLayout>

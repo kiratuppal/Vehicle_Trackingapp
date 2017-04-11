@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_userlogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vehicle3"
+
+
+
+    tools:context="com.example.lenovo.vehicle_trackingapp.Userlogin">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="LOGIN "
+    android:textSize="40dp"
+    android:textColor="#fff"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="10dp"
+    android:id="@+id/login"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="page"
+        android:layout_toRightOf="@+id/login"
+        android:textSize="30dp"
+       android:textColor="#fff"
+        android:layout_marginTop="40dp"
+        />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:hint="Username"
+            android:background="@drawable/shape1"
+            android:layout_centerInParent="true"
+            android:id="@+id/usenme"
+            />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/shape1"
+                android:hint="Contact Number"
+                android:layout_below="@+id/usenme"
+                android:id="@+id/passwrrd"
+                />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="login"
+                    android:layout_below="@id/passwrrd"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="driver_login"
+                    />
+</RelativeLayout>

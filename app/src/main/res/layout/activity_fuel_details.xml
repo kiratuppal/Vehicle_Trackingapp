@@ -44,7 +44,7 @@
          android:id="@+id/bill"
 
          />
-        <view
+        <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_below="@+id/bill"
@@ -65,7 +65,7 @@
     android:id="@+id/volume"
     android:inputType="number"
     />
-        <view
+        <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_below="@+id/volume"
@@ -85,7 +85,7 @@
          android:inputType="number"
          android:id="@+id/amt"
          />
-        <view
+        <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_below="@+id/amt"
@@ -104,7 +104,7 @@
             android:background="@null"
             android:padding="10dp"
             />
-        <view
+        <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_below="@+id/date"
@@ -124,7 +124,7 @@
             android:id="@+id/date1"
 
             />
-        <view
+        <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_below="@+id/date1"

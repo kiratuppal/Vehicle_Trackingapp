@@ -35,8 +35,7 @@
         android:textSize="20dp"
         android:background="@null"
         android:id="@+id/Vnum"/>
-
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#fff"
@@ -58,7 +57,7 @@
         android:id="@+id/Bno"
         />
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#fff"
@@ -79,7 +78,7 @@
         android:background="@null"
         android:id="@+id/amt2"/>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#fff"
@@ -99,7 +98,7 @@
         android:background="@null"
         android:id="@+id/service_det"/>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#fff"
@@ -119,7 +118,7 @@
         android:background="@null"
         android:id="@+id/date2"/>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#fff"

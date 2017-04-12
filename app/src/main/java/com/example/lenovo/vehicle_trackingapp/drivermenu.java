@@ -28,7 +28,7 @@ public class drivermenu extends AppCompatActivity {
 
     public void distance (View view) {
 
-        Intent i = new Intent(drivermenu.this, .class);
+        Intent i = new Intent(drivermenu.this, distance_driver.class);
 
         startActivity(i);
     }

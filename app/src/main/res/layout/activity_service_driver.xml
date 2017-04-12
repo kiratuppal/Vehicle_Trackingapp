@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_distance_driver"
+    android:id="@+id/activity_service_driver"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ccf126"
-    tools:context="com.example.lenovo.vehicle_trackingapp.distance_driver">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/distances"
-        android:layout_centerHorizontal="true"
-        android:padding="20dp"
-        android:id="@+id/dis_image"/>
+    android:background="#b71aff"
+    tools:context="com.example.lenovo.vehicle_trackingapp.service_driver">
+ <ImageView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:src="@drawable/tool"
+     android:layout_centerHorizontal="true"
+     android:padding="20dp"
+     android:id="@+id/tool_imge"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dis_image"
-        android:text="View Distances"
+        android:layout_below="@id/tool_imge"
+        android:text="Service Details"
         android:textSize="20dp"
-        android:textAlignment="center"/>
-
-
-
+        android:textColor="#fff"
+        android:textAlignment="center"
+        />
     <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/shape6"
-    android:hint="Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape6"
+        android:hint="Date"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-    android:textAlignment="center"
-    android:padding="20dp"
+        android:textAlignment="center"
+        android:padding="20dp"
         android:layout_centerInParent="true"
-        android:id="@+id/addingdate"/>
+        android:id="@+id/dateofservice"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,17 +45,16 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:padding="20dp"
-        android:layout_below="@id/addingdate"
-        android:id="@+id/adding_vehnum"
-        />
+        android:layout_below="@id/dateofservice"
+        android:id="@+id/numofveh"/>
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/adding_vehnum"
+        android:layout_below="@+id/numofveh"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="view distance travelled"
-        android:onClick="see_distance"
-        />
+        android:text="view service details"
+        android:onClick="see_service"/>
 </RelativeLayout>

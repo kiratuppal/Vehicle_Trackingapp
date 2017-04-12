@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_distance_driver"
+    android:id="@+id/activity_fuel_driver"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ccf126"
-    tools:context="com.example.lenovo.vehicle_trackingapp.distance_driver">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/distances"
-        android:layout_centerHorizontal="true"
-        android:padding="20dp"
-        android:id="@+id/dis_image"/>
+   android:background="#18ffba"
+    tools:context="com.example.lenovo.vehicle_trackingapp.fuel_driver">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/fuelcounter"
+    android:layout_centerHorizontal="true"
+    android:padding="20dp"
+    android:id="@+id/fuel_imge"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dis_image"
-        android:text="View Distances"
+        android:layout_below="@id/fuel_imge"
+        android:text="Fuel Details"
         android:textSize="20dp"
         android:textAlignment="center"/>
 
 
 
     <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/shape6"
-    android:hint="Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape6"
+        android:hint="Date"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-    android:textAlignment="center"
-    android:padding="20dp"
+        android:textAlignment="center"
+        android:padding="20dp"
         android:layout_centerInParent="true"
-        android:id="@+id/addingdate"/>
+        android:id="@+id/add_dates"/>
+
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,17 +47,17 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:padding="20dp"
-        android:layout_below="@id/addingdate"
-        android:id="@+id/adding_vehnum"
+        android:layout_below="@id/add_dates"
+        android:id="@+id/add_vehnum"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/adding_vehnum"
+        android:layout_below="@+id/add_vehnum"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="view distance travelled"
-        android:onClick="see_distance"
+        android:text="view Fuel details"
+        android:onClick="see_fuel"
         />
 </RelativeLayout>

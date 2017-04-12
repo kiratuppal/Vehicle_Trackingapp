@@ -19,4 +19,25 @@ public class admin_menu extends AppCompatActivity {
 
         startActivity(i);
     }
+
+    public void goto_distance(View view) {
+
+        Intent i = new Intent(admin_menu.this, distance_driver.class);
+
+        startActivity(i);
+    }
+
+    public void goto_service (View view) {
+
+        Intent i = new Intent(admin_menu.this, service_driver.class);
+
+        startActivity(i);
+    }
+
+    public void goto_fueldetails (View view) {
+
+        Intent i = new Intent(admin_menu.this, fuel_driver.class);
+
+        startActivity(i);
+    }
 }

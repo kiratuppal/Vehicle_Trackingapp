@@ -6,5 +6,5 @@ package com.example.lenovo.vehicle_trackingapp;
 
 public class ip_adress {
 
-    public static String ip = "192.168.43.218";
+    public static String ip = "192.168.0.22";
 }

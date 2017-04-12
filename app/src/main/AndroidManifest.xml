@@ -35,7 +35,8 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".add_driver" />
-        <activity android:name=".drivermenu"></activity>
+        <activity android:name=".drivermenu" />
+        <activity android:name=".distance_driver"></activity>
     </application>
 
 </manifest>

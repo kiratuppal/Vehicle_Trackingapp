@@ -1,11 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_drivermenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blurimage"
+    android:orientation="vertical"
+
     tools:context="com.example.lenovo.vehicle_trackingapp.drivermenu">
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout2"
+    android:layout_weight="1"
+    >
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:src="@drawable/pump"
+       android:scaleType="centerCrop"
+       android:onClick="goto_fuel"
 
-</RelativeLayout>
+       />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9bcccccc"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD FUEL DETAILS"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/relative2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/servtool"
+            android:scaleType="centerCrop"
+            android:onClick="goto_service"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9bcccccc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD SERVICE DETAILS"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ambleside"
+            android:scaleType="centerCrop"
+            android:onClick="distance"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3fcccccc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DISTANCE TRAVELLED"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

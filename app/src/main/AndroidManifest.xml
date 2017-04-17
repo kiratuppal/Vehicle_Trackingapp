@@ -9,7 +9,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".start_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +38,8 @@
         <activity android:name=".drivermenu" />
         <activity android:name=".distance_driver" />
         <activity android:name=".fuel_driver" />
-        <activity android:name=".service_driver"></activity>
+        <activity android:name=".service_driver" />
+        <activity android:name=".Viewdriver"></activity>
     </application>
 
 </manifest>

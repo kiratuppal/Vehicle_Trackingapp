@@ -39,7 +39,9 @@
         <activity android:name=".distance_driver" />
         <activity android:name=".fuel_driver" />
         <activity android:name=".service_driver" />
-        <activity android:name=".Viewdriver"></activity>
+        <activity android:name=".Viewdriver" />
+        <activity android:name=".Viewfueldetails" />
+        <activity android:name=".viewservice"></activity>
     </application>
 
 </manifest>

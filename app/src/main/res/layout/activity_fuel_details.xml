@@ -41,20 +41,20 @@
          android:layout_marginLeft="20dp"
          android:hint="Vehicle No."
          android:textColorHint="#fff"
-         android:id="@+id/bill"
+         android:id="@+id/venum"
 
          />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_below="@+id/bill"
+            android:layout_below="@+id/venum"
             android:background="#fff"
             />
 
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@id/bill"
+    android:layout_below="@id/venum"
     android:layout_marginTop="10dp"
     android:background="@null"
     android:padding="10dp"
@@ -62,19 +62,19 @@
     android:layout_marginRight="20dp"
     android:hint="Bill No."
     android:textColorHint="#fff"
-    android:id="@+id/volume"
+    android:id="@+id/bill"
     android:inputType="number"
     />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_below="@+id/volume"
+            android:layout_below="@+id/bill"
             android:background="#fff"
             />
      <EditText
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:layout_below="@id/volume"
+         android:layout_below="@id/bill"
          android:layout_marginTop="10dp"
          android:textColorHint="#fff"
          android:layout_marginLeft="20dp"
@@ -83,12 +83,12 @@
          android:padding="10dp"
          android:hint="Volume"
          android:inputType="number"
-         android:id="@+id/amt"
+         android:id="@+id/volume"
          />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_below="@+id/amt"
+            android:layout_below="@+id/volume"
             android:background="#fff"
             android:id="@+id/amt1"
             />
@@ -100,14 +100,14 @@
             android:layout_marginTop="10dp"
             android:textColorHint="#fff"
             android:layout_marginLeft="20dp"
-            android:id="@+id/date"
+            android:id="@+id/amount"
             android:background="@null"
             android:padding="10dp"
             />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_below="@+id/date"
+            android:layout_below="@+id/amount"
             android:background="#fff"
             android:id="@+id/view1"/>
 
@@ -115,19 +115,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/view1"
-            android:hint="Date"
+            android:hint="Date:"
             android:layout_marginTop="10dp"
             android:textColorHint="#fff"
             android:layout_marginLeft="20dp"
             android:background="@null"
             android:padding="10dp"
-            android:id="@+id/date1"
+            android:id="@+id/date"
 
             />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_below="@+id/date1"
+            android:layout_below="@+id/date"
             android:background="#fff"
             android:id="@+id/view2"
             />

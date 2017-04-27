@@ -1,6 +1,7 @@
 package com.example.lenovo.vehicle_trackingapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -76,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     if(response.getString("key").equals("done"))
                     {
+                        SharedPreferences.Editor sp = getSharedPreferences("admin_info" , MODE_PRIVATE).edit();
+                        sp.putString("admin_id" , response.getString("id"));
+                        sp.commit();
+                        Toast.makeText(MainActivity.this ,response.getString("id") , Toast.LENGTH_SHORT ).show();
+
                         Intent i = new Intent(MainActivity.this,admin_menu.class);
 
                         startActivity(i);

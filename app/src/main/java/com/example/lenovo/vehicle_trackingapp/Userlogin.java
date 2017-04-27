@@ -1,6 +1,7 @@
 package com.example.lenovo.vehicle_trackingapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -61,6 +62,10 @@ public class Userlogin extends AppCompatActivity {
                 try {
                     if(response.getString("key").equals("done"))
                     {
+
+                        SharedPreferences.Editor sp = getSharedPreferences("driver_info" , MODE_PRIVATE).edit();
+                        sp.putString("driver_id" , response.getString("id"));
+                        sp.commit();
                         Intent i = new Intent(Userlogin.this,drivermenu.class);
 
                         startActivity(i);

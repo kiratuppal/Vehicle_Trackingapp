@@ -1,5 +1,6 @@
 package com.example.lenovo.vehicle_trackingapp;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -57,6 +58,9 @@ public class registration extends AppCompatActivity {
         }
 
         JSONObject job = new JSONObject();
+
+        SharedPreferences sp = getSharedPreferences("admin_info" , MODE_PRIVATE);
+        String admin_id = sp.getString("admin_id" , "");
         {
             try {
                 job.put("name_key" , name_s);
@@ -64,6 +68,7 @@ public class registration extends AppCompatActivity {
                 job.put("email_key" , email_s);
                 job.put("age_key" , age_s);
                 job.put("veh_key" , vehicle_s);
+                job.put("admin_key",admin_id);
 
             } catch (JSONException e) {
                 e.printStackTrace();

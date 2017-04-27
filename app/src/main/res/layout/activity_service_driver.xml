@@ -21,19 +21,39 @@
         android:text="Service Details"
         android:textSize="20dp"
         android:textColor="#fff"
+
         android:textAlignment="center"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape6"
-        android:hint="Date"
+        android:hint="Date From"
+        android:textColorHint="#000"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textAlignment="center"
         android:padding="20dp"
+        android:textColor="#000"
+
         android:layout_centerInParent="true"
         android:id="@+id/dateofservice"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape6"
+        android:hint="Date To"
+        android:textColorHint="#000"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:padding="20dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/dateofservice2"
+        android:layout_below="@id/dateofservice"/>
+
 
     <EditText
         android:layout_width="match_parent"
@@ -45,9 +65,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:padding="20dp"
-        android:layout_below="@id/dateofservice"
+        android:textColorHint="#000"
+        android:textColor="#000"
+        android:layout_below="@id/dateofservice2"
         android:id="@+id/numofveh"/>
-
 
     <Button
         android:layout_width="wrap_content"

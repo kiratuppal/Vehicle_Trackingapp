@@ -65,6 +65,7 @@ public class Userlogin extends AppCompatActivity {
 
                         SharedPreferences.Editor sp = getSharedPreferences("driver_info" , MODE_PRIVATE).edit();
                         sp.putString("driver_id" , response.getString("id"));
+                        sp.putString("v_no" , response.getString("v_no"));
                         sp.commit();
                         Intent i = new Intent(Userlogin.this,drivermenu.class);
 

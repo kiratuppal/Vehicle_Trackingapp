@@ -22,9 +22,7 @@ public class admin_menu extends AppCompatActivity {
 
     public void goto_distance(View view) {
 
-        Intent i = new Intent(admin_menu.this, distance_driver.class);
 
-        startActivity(i);
     }
 
     public void goto_service (View view) {
@@ -39,5 +37,20 @@ public class admin_menu extends AppCompatActivity {
         Intent i = new Intent(admin_menu.this, fuel_driver.class);
 
         startActivity(i);
+    }
+
+    public void goto_profile (View view) {
+
+        Intent i = new Intent(admin_menu.this, Viewadminprofile.class);
+
+        startActivity(i);
+    }
+
+    public void goto_maps(View view) {
+
+        Intent i = new Intent(admin_menu.this, Car_location.class);
+
+        startActivity(i);
+
     }
 }

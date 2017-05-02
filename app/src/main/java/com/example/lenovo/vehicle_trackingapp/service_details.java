@@ -21,12 +21,76 @@ import java.util.Calendar;
 
 public class service_details extends AppCompatActivity {
 
+
+
+
+    int year;
+    int month;
+    int day;
+    EditText datecalender;
+
+    EditText vehnum;
+    EditText billno;
+    EditText amount;
+    EditText service;
+    EditText date;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_service_details);
+
+        SharedPreferences sp = getSharedPreferences("driver_info" , MODE_PRIVATE);
+        String vehicle_no = sp.getString("v_no" , "");
+
+
+
+        datecalender = (EditText) findViewById(R.id.date2);
+        Calendar c = Calendar.getInstance();
+
+         vehnum = (EditText) findViewById(R.id.Vnum);
+         billno = (EditText) findViewById(R.id.Bno);
+         amount = (EditText) findViewById(R.id.amt2);
+         service = (EditText) findViewById(R.id.service_det);
+         date = (EditText) findViewById(R.id.date2);
+
+         vehnum.setText(vehicle_no);
+
+        vehnum.setEnabled(false);
+
+
+        datecalender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Calendar mcurrentDate = Calendar.getInstance();
+                year = mcurrentDate.get(Calendar.YEAR);
+                month = mcurrentDate.get(Calendar.MONTH);
+                day = mcurrentDate.get(Calendar.DAY_OF_MONTH);
+
+                final DatePickerDialog mDatePicker = new DatePickerDialog(service_details.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
+                        datecalender.setText(new StringBuilder().append(selectedyear).append("/").append(selectedmonth+ 1).append("/").append(selectedday));
+                        int month_k = selectedmonth + 1;
+
+                    }
+                }, year, month, day);
+                mDatePicker.setTitle("Please select date");
+                // TODO Hide Future Date Here
+                mDatePicker.getDatePicker().setMaxDate(System.currentTimeMillis());
+
+                // TODO Hide Past Date Here
+                //  mDatePicker.getDatePicker().setMinDate(System.currentTimeMillis());
+                mDatePicker.show();
+
+            }
+        });
+    }
+
     public void ser_details (View v) {
-        EditText vehnum = (EditText) findViewById(R.id.Vnum);
-        EditText billno = (EditText) findViewById(R.id.Bno);
-        EditText amount = (EditText) findViewById(R.id.amt2);
-        EditText service = (EditText) findViewById(R.id.service_det);
-        EditText date = (EditText) findViewById(R.id.date2);
+
 
         String vehnum_s = vehnum.getText().toString();
         String bill_s = billno.getText().toString();
@@ -103,48 +167,6 @@ public class service_details extends AppCompatActivity {
             app.addToRequestQueue(jobreq);
 
         }
-    }
-
-
-    int year;
-    int month;
-    int day;
-    EditText datecalender;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service_details);
-
-        datecalender = (EditText) findViewById(R.id.date);
-        Calendar c = Calendar.getInstance();
-        datecalender.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Calendar mcurrentDate = Calendar.getInstance();
-                year = mcurrentDate.get(Calendar.YEAR);
-                month = mcurrentDate.get(Calendar.MONTH);
-                day = mcurrentDate.get(Calendar.DAY_OF_MONTH);
-
-                final DatePickerDialog mDatePicker = new DatePickerDialog(service_details.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
-                        datecalender.setText(new StringBuilder().append(day).append("/").append(month + 1).append("/").append(year));
-                        int month_k = selectedmonth + 1;
-
-                    }
-                }, year, month, day);
-                mDatePicker.setTitle("Please select date");
-                // TODO Hide Future Date Here
-                mDatePicker.getDatePicker().setMaxDate(System.currentTimeMillis());
-
-                // TODO Hide Past Date Here
-                //  mDatePicker.getDatePicker().setMinDate(System.currentTimeMillis());
-                mDatePicker.show();
-
-            }
-        });
     }
 }
 

@@ -9,6 +9,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.lenovo.vehicle_trackingapp.adapter.adapter_fuel;
+import com.example.lenovo.vehicle_trackingapp.adapter.adapter_service;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -53,7 +54,7 @@ public class viewservice extends AppCompatActivity {
                         try {
                             JSONArray jarr =  response.getJSONArray("key");
 
-                            adapter_fuel ad = new adapter_fuel(jarr , viewservice.this);
+                            adapter_service ad = new adapter_service(jarr , viewservice.this);
 
                             r.setLayoutManager(new android.support.v7.widget.LinearLayoutManager(viewservice.this , android.support.v7.widget.LinearLayoutManager.VERTICAL,false));
 
@@ -71,7 +72,7 @@ public class viewservice extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                System.out.println(error);
             }
         });
 

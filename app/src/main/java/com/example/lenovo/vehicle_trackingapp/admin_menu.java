@@ -1,9 +1,12 @@
 package com.example.lenovo.vehicle_trackingapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import static android.R.id.edit;
 
 public class admin_menu extends AppCompatActivity {
 
@@ -53,4 +56,10 @@ public class admin_menu extends AppCompatActivity {
         startActivity(i);
 
     }
+
+    public void goto_logout(View view) {
+        SharedPreferences.Editor sp = getSharedPreferences("admin_info" , MODE_PRIVATE) .edit();
+        sp.commit();
+        finish();
+   }
 }

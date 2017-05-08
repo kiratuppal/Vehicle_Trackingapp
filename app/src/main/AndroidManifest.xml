@@ -49,11 +49,13 @@
         <activity android:name=".Viewadminprofile" />
         <activity android:name=".Updateprofile" />
         <activity android:name=".Car_location" />
-        <activity android:name=".Show_map"></activity>
+        <activity android:name=".Show_map" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBjf66poIaKlNnooYmqKWHJ0zdPX7bhAM8" />
+
+        <activity android:name=".Vehiclemaster"></activity>
     </application>
 
 </manifest>

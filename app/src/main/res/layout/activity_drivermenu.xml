@@ -166,6 +166,7 @@
             android:layout_marginLeft="20dp"
             android:textColor="#fff"
             android:padding="20dp"
+            android:onClick="goto_userlogin"
             android:background="@drawable/shape4"/>
 
 

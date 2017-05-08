@@ -21,8 +21,11 @@ public class Userlogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_userlogin);
-    }
+
+        SharedPreferences sp = getSharedPreferences("driver_info" , MODE_PRIVATE);
+        Intent i = new Intent(Userlogin.this,drivermenu.class);
+        finish();    }
+
 
 
     public void driver_login (View view) {

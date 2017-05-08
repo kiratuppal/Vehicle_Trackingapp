@@ -1,6 +1,7 @@
 package com.example.lenovo.vehicle_trackingapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,5 +32,11 @@ public class drivermenu extends AppCompatActivity {
         Intent i = new Intent(drivermenu.this, distance_driver.class);
 
         startActivity(i);
+    }
+
+    public void goto_userlogin(View view) {
+        SharedPreferences.Editor sp = getSharedPreferences("driver_info" , MODE_PRIVATE).edit();
+        sp.commit();
+        finish();
     }
 }

@@ -2,6 +2,7 @@ package com.example.lenovo.vehicle_trackingapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -34,30 +35,31 @@ public class AdminSignup extends AppCompatActivity {
         String name_s = name.getText().toString();
         String password_s = password.getText().toString();
         String contact_s = contact.getText().toString();
+        String pattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[!@#$%^&*+=?-]).{8,15}$";
 
-        if(email_s.equals(""))
+        if(!Patterns.EMAIL_ADDRESS.matcher(email_s).matches() || email_s.contains("_"))
         {
-            Toast.makeText(AdminSignup.this , "please enter email" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(AdminSignup.this , "please enter valid email type" , Toast.LENGTH_SHORT).show();
             return;
 
         }
 
-        if(name_s.equals(""))
+        if(name.length() < 4 || !name_s.matches("[a-zA-Z ]+"))
         {
-            Toast.makeText(AdminSignup.this , "please enter name" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(AdminSignup.this , "name must be 4 character long and not contain any digits" , Toast.LENGTH_SHORT).show();
             return;
 
         }
 
-        if(password_s.equals(""))
+        if(!password_s.matches(pattern) || password_s.length() < 8)
         {
-            Toast.makeText(AdminSignup.this , "please enter password" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(AdminSignup.this ,  "password must contain atleast one alphabet , digit , special character and length must be 8 character" , Toast.LENGTH_SHORT).show();
             return;
 
         }
-        if(contact_s.equals(""))
+        if(contact_s.length() < 10)
         {
-            Toast.makeText(AdminSignup.this , "please enter contact number" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(AdminSignup.this ,  "contact must be 10 digit" , Toast.LENGTH_SHORT).show();
             return;
 
         }

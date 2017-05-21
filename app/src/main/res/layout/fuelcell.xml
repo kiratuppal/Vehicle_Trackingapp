@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="20dp"
-    android:background="@drawable/wallpaper">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/shape4">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Volume : "
+            android:text="Volume (in litres): "
             android:textSize="20dp"/>
 
         <TextView
@@ -70,7 +70,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amount : "
+            android:text="Amount (in rupees) : "
             android:textSize="20dp"/>
 
         <TextView

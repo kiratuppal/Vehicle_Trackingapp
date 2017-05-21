@@ -81,7 +81,7 @@
          android:layout_marginRight="20dp"
          android:background="@null"
          android:padding="10dp"
-         android:hint="Volume"
+         android:hint="Volume (In Litres)"
          android:inputType="number"
          android:id="@+id/volume"
          />
@@ -96,11 +96,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/amt1"
-            android:hint="Amount"
+            android:hint="Amount (In Rupees)"
             android:layout_marginTop="10dp"
             android:textColorHint="#fff"
             android:layout_marginLeft="20dp"
             android:id="@+id/amount"
+            android:inputType="number"
             android:background="@null"
             android:padding="10dp"
             />
@@ -122,6 +123,8 @@
             android:background="@null"
             android:padding="10dp"
             android:id="@+id/date"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
 
             />
         <View

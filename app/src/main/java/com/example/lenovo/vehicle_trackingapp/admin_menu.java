@@ -23,7 +23,10 @@ public class admin_menu extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void goto_distance(View view) {
+    public void goto_vehicle(View view) {
+        Intent i = new Intent(admin_menu.this, seevehicles.class);
+
+        startActivity(i);
 
 
     }
@@ -59,6 +62,7 @@ public class admin_menu extends AppCompatActivity {
 
     public void goto_logout(View view) {
         SharedPreferences.Editor sp = getSharedPreferences("admin_info" , MODE_PRIVATE) .edit();
+        sp.clear();
         sp.commit();
         finish();
    }

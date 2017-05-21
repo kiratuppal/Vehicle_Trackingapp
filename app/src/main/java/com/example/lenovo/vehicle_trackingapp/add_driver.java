@@ -26,4 +26,11 @@ public class add_driver extends AppCompatActivity {
 
         startActivity(i);
     }
+
+    public void goto_docs(View view) {
+
+        Intent i = new Intent(add_driver.this, Viewdocs.class);
+
+        startActivity(i);
+    }
 }

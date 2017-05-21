@@ -4,11 +4,16 @@
     android:id="@+id/activity_userlogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/vehicle3"
+    android:background="@drawable/driverpage"
 
 
 
     tools:context="com.example.lenovo.vehicle_trackingapp.Userlogin">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9093dcec"/>
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -34,9 +39,9 @@
             android:padding="10dp"
             android:layout_margin="20dp"
             android:hint="Username"
-            android:textColorHint="#000"
-            android:textColor="#000"
-            android:background="@drawable/shape1"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:background="@drawable/shape4"
             android:layout_centerInParent="true"
             android:id="@+id/usenme"
             />
@@ -45,17 +50,19 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:layout_margin="20dp"
-                android:textColor="#000"
-                android:textColorHint="#000"
-                android:background="@drawable/shape1"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:background="@drawable/shape4"
                 android:hint="Contact Number"
                 android:layout_below="@+id/usenme"
                 android:id="@+id/passwrrd"
                 />
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="login"
+                    android:background="#000"
+                    android:layout_marginTop="10dp"
                     android:layout_below="@id/passwrrd"
                     android:layout_marginLeft="20dp"
                     android:onClick="driver_login"

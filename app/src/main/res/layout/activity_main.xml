@@ -74,6 +74,7 @@
            android:layout_marginRight="20dp"
            android:layout_marginBottom="20dp"
            android:hint="Password"
+           android:inputType="textPassword"
            android:id="@+id/passwrd"
            android:imeOptions="actionDone"
            />

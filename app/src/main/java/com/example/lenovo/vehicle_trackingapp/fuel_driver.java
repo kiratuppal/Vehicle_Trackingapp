@@ -2,18 +2,33 @@ package com.example.lenovo.vehicle_trackingapp;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class fuel_driver extends AppCompatActivity {
 
-    EditText fdate , tdate , vehinumbr;
+    EditText fdate , tdate;
     String   frmdate , todate , vhnum;
+    Spinner vehinumbr;
 
     int year;
     int month;
@@ -27,7 +42,7 @@ public class fuel_driver extends AppCompatActivity {
         setContentView(R.layout.activity_fuel_driver);
         fdate = (EditText)findViewById(R.id.add_dates);
         tdate = (EditText)findViewById(R.id.add_dates2);
-        vehinumbr = (EditText)findViewById(R.id.add_vehnum);
+        vehinumbr = (Spinner)findViewById(R.id.add_vehnum);
         fdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,20 +97,81 @@ public class fuel_driver extends AppCompatActivity {
 
             }
         });
+
+        get_vehicles();
     }
 
 
-    public void see_fuel(View View){
+    public void see_fuel(View View) {
 
         frmdate = fdate.getText().toString();
         todate = tdate.getText().toString();
-        vhnum = vehinumbr.getText().toString();
+        vhnum = vehinumbr.getSelectedItem().toString();
 
         Intent i = new Intent(fuel_driver.this, Viewfueldetails.class);
-        i.putExtra("vehiclenum",vhnum);
-        i.putExtra("fromdate",frmdate);
-        i.putExtra("todatee",todate);
+        i.putExtra("vehiclenum", vhnum);
+        i.putExtra("fromdate", frmdate);
+        i.putExtra("todatee", todate);
         startActivity(i);
+    }
+
+    public void get_vehicles() {
+        JSONObject job = new JSONObject();
+
+        SharedPreferences sp = getSharedPreferences("admin_info", MODE_PRIVATE);
+        String admin_id = sp.getString("admin_id", "");
+
+        try {
+
+            job.put("aid", admin_id);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        System.out.println(job);
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://" + ip_adress.ip + "/viewvehicle.php", job, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray jarr = response.getJSONArray("key");
+
+                    List<String> list = new ArrayList<>();
+                    list.add("select vehicle number");
+
+                    for (int i = 0; i < jarr.length(); i++) {
+                        try {
+                            JSONObject job = jarr.getJSONObject(i);
+                            list.add(job.getString("vehiclenumber"));
+                        } catch (JSONException e1) {
+                            e1.printStackTrace();
+                        }
+
+
+                    }
+
+                    ArrayAdapter<String> dataadapter = new ArrayAdapter<String>(fuel_driver.this, R.layout.spinner_cell, list);
+                    vehinumbr.setAdapter(dataadapter);
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                System.out.println(error);
+
+            }
+        });
+        jobreq.setRetryPolicy(new DefaultRetryPolicy(20000, 3, 2));
+        AppController app = new AppController(fuel_driver.this);
+        app.addToRequestQueue(jobreq);
     }
     }
 

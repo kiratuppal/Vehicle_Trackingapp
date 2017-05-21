@@ -73,7 +73,7 @@ public class Fuel_details extends AppCompatActivity {
                 final DatePickerDialog mDatePicker = new DatePickerDialog(Fuel_details.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
-                        datecalender.setText(new StringBuilder().append(day).append("/").append(month + 1).append("/").append(year));
+                        datecalender.setText(new StringBuilder().append(selectedday).append("/").append(selectedmonth + 1).append("/").append(selectedyear));
                         int month_k = selectedmonth + 1;
 
                     }
@@ -144,7 +144,7 @@ public class Fuel_details extends AppCompatActivity {
                 public void onResponse(JSONObject response) {
                     try {
                         if (response.getString("key").equals("1")) {
-                            Toast.makeText(Fuel_details.this, "done", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Fuel_details.this, "Fuel details added", Toast.LENGTH_SHORT).show();
                         }
                         if (response.getString("key").equals("0")) {
                             Toast.makeText(Fuel_details.this, "This bill number already exists", Toast.LENGTH_SHORT).show();

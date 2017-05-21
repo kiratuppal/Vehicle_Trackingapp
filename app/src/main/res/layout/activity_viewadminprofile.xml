@@ -4,125 +4,123 @@
     android:id="@+id/activity_viewadminprofile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="@drawable/gradient"
+    android:background="#fff"
 
     tools:context="com.example.lenovo.vehicle_trackingapp.Viewadminprofile">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="PROFILE DETAILS"
-    android:textColor="#000"
-    android:textSize="30dp"
-    android:gravity="center"
-    android:layout_marginTop="20dp"
-    android:id="@+id/profdet"
-    />
 
     <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/profdet"
-    android:text="Name :"
-    android:textColor="#000"
-    android:textSize="20dp"
-    android:layout_marginLeft="30dp"
-    android:layout_marginTop="30dp"
+        android:id="@+id/profdet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="PROFILE DETAILS"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <TextView
         android:id="@+id/adname"
-    />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/profdet"
-        android:text="00"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignLeft="@+id/ademail"
+        android:layout_alignStart="@+id/ademail"
+        android:text="Name :"
         android:textColor="#000"
-        android:layout_toRightOf="@id/adname"
-        android:textSize="20dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profdet"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
-        />
+        android:layout_toRightOf="@+id/adname"
+        android:text="00"
+        android:textColor="#000"
+        android:textSize="20dp" />
 
     <TextView
+        android:id="@+id/ademail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/adname"
+        android:layout_below="@+id/adname"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:text="e-mail :"
         android:textColor="#000"
-        android:textSize="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/ademail"
-        />
+        android:textSize="20dp" />
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/adname"
-        android:text="00"
-        android:textColor="#000"
-        android:layout_toRightOf="@id/ademail"
-        android:textSize="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
-        />
-
-
-    <TextView
+        android:id="@+id/adcntct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ademail"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:text="Contact :"
         android:textColor="#000"
-        android:textSize="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/adcntct"/>
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ademail"
-        android:text="00"
-        android:textColor="#000"
-        android:layout_toRightOf="@id/adcntct"
-        android:textSize="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
-        />
+        android:layout_toRightOf="@id/adcntct"
+        android:text="00"
+        android:id="@+id/mobile_et"
+        android:textColor="#000"
+        android:textSize="20dp" />
 
     <TextView
+        android:id="@+id/advehicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/adcntct"
-        android:text="No. of Vehicles :"
-        android:textColor="#000"
-        android:textSize="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:id="@+id/advehicle"/>
+        android:text="Password"
+        android:textColor="#000"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/adcntct"
-        android:text="00"
-        android:textColor="#000"
-        android:layout_toRightOf="@id/advehicle"
-        android:textSize="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
-        />
+        android:layout_toRightOf="@id/advehicle"
+        android:text="00"
+        android:id="@+id/pass_et"
+        android:textColor="#000"
+        android:textSize="20dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/advehicle"
-        android:layout_margin="30dp"
         android:layout_centerHorizontal="true"
-        android:text="update"
-        android:textColor="#000"
+        android:layout_margin="30dp"
         android:background="@drawable/shape2"
-        android:onClick="update_profile"/>
+        android:onClick="update_profile"
+        android:text="update"
+        android:textColor="#000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:id="@+id/email_tex"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_above="@+id/adcntct"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
 
 </RelativeLayout>

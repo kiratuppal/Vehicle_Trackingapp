@@ -1,10 +1,12 @@
 package com.example.lenovo.vehicle_trackingapp;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.*;
 import android.support.v7.widget.LinearLayoutManager;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
@@ -79,6 +81,37 @@ RecyclerView r;
         AppController app = new AppController(Viewdriver.this);
 
         app.addToRequestQueue(jsonreq);
+    }
+
+    public static void delete_driver(String driver_id , final Activity a)
+    {
+        JSONObject job = new JSONObject();
+
+        try {
+            job.put("driver_id", driver_id);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest jobjreq = new JsonObjectRequest("http://" + ip_adress.ip + "/delete_driver.php", job, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                Toast.makeText(a , "deleted successfully", Toast.LENGTH_SHORT).show();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+
+        jobjreq.setRetryPolicy(new DefaultRetryPolicy(20000 , 2 ,2));
+
+        AppController app = new AppController(a);
+
+        app.addToRequestQueue(jobjreq);
     }
 }
 

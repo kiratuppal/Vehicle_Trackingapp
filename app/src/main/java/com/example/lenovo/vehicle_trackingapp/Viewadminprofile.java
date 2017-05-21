@@ -20,9 +20,9 @@ import static com.example.lenovo.vehicle_trackingapp.R.id.adname;
 
 public class Viewadminprofile extends AppCompatActivity {
 
-    TextView adminname,ademail,adcontact;
+    TextView adminname,ademail,adcontact , pass_et;
 
-    String name,email,contact;
+    String name,email,contact ,pass;
 
 
 
@@ -30,9 +30,10 @@ public class Viewadminprofile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewadminprofile);
-       adminname = (TextView)findViewById(adname);
-        ademail = (TextView) findViewById(R.id.ademail);
-        adcontact = (TextView)findViewById(R.id.adcntct);
+       adminname = (TextView)findViewById(R.id.textView);
+        ademail = (TextView) findViewById(R.id.email_tex);
+        adcontact = (TextView)findViewById(R.id.mobile_et);
+        pass_et = (TextView)findViewById(R.id.pass_et);
 
         get_values();
     }
@@ -41,6 +42,7 @@ public class Viewadminprofile extends AppCompatActivity {
 
         {
             JSONObject jobj = new JSONObject();
+
             SharedPreferences sp = getSharedPreferences("admin_info",MODE_PRIVATE);
             String admin_aid = sp.getString("admin_id" , "");
 
@@ -59,16 +61,18 @@ public class Viewadminprofile extends AppCompatActivity {
                     try {
                         JSONObject job_box =  response.getJSONObject ("result");
 
-                        name = job_box.getString("Name");
+                        name = job_box.getString("name");
 
-                        email =  job_box.getString("Emailid");
+                        email =  job_box.getString("email");
 
-                        contact = job_box.getString("Contactnum");
+                        contact = job_box.getString("contact");
 
+                        pass = job_box.getString("password");
 
                         adminname.setText(name);
                         ademail.setText( email );
                         adcontact.setText(contact);
+                        pass_et.setText( job_box.getString("password"));
 
 
 
@@ -100,6 +104,7 @@ public class Viewadminprofile extends AppCompatActivity {
         i.putExtra ("name_key" ,name );
         i.putExtra ("email_key" ,email );
         i.putExtra ("contact_key" ,contact );
+        i.putExtra("pass", pass);
         startActivity(i);
     }
 }

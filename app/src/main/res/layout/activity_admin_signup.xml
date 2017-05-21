@@ -4,9 +4,20 @@
     android:id="@+id/activity_admin_signup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:background="@drawable/blueeee"
+   android:background="#1dbfff"
     android:orientation="vertical"
     tools:context="com.example.lenovo.vehicle_trackingapp.AdminSignup">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin Signup"
+        android:textSize="30dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        />
 
 
 
@@ -16,6 +27,9 @@
         android:hint="Email"
         android:id="@+id/email_et"
         android:textColor="#fff"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
         android:textColorHint="#fff"
         android:layout_marginTop="80dp"
         android:layout_marginLeft="20dp"
@@ -58,6 +72,7 @@
         android:textColor="#fff"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape4"
+        android:inputType="number"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textColorHint="#fff"

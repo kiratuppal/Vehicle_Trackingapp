@@ -17,7 +17,7 @@
         android:id="@+id/vehname"
         android:textColor="#fff"
         android:textColorHint="#fff"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/shape4"
@@ -26,7 +26,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="name"
+        android:hint="Company"
         android:textColor="#fff"
         android:textColorHint="#fff"
         android:layout_marginTop="20dp"
@@ -34,33 +34,75 @@
         android:padding="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:id="@+id/name_et"/>
+        android:id="@+id/cmpny"/>
 
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="Vehicle Number"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape4"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textColorHint="#fff"
         android:textColor="#fff"
+        android:id="@+id/regnum"
         android:padding="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint=" Contact Number"
+        android:hint="Vehicle Type"
         android:textColor="#fff"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape4"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textColorHint="#fff"
-
+        android:id="@+id/type"
         android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Colour"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#fff"
+        android:id="@+id/vehcolor"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Manufacture Year"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape4"
+        android:inputType="number"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#fff"
+        android:id="@+id/vehyear"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fuel Type"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#fff"
+        android:id="@+id/fueltype"
+        android:padding="10dp"/>
+
 
     <Button
         android:layout_width="wrap_content"

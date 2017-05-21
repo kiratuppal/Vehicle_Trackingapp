@@ -29,9 +29,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-    SharedPreferences sp = getSharedPreferences("admin_info" , MODE_PRIVATE);
-        Intent i = new Intent(MainActivity.this,admin_menu.class);
-        finish();    }
+        SharedPreferences sp = getSharedPreferences("admin_info" , MODE_PRIVATE);
+        if(!sp.getString("admin_id","").equals(""))
+        {
+            Intent i = new Intent(MainActivity.this, admin_menu.class);
+            startActivity(i);
+            finish();
+
+        }
+
+
+    }
 
     public void goto_signup(View view) {
 
@@ -40,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
     }
+
+    public void forgot(View view) {
+
+        Intent i = new Intent(MainActivity.this, forgotpassword.class);
+
+        startActivity(i);
+    }
+
 
     public void goto_signin(View view) {
 
@@ -88,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(i);
                     }
                     else {
-                         Toast.makeText(MainActivity.this, "Incorrect input" , Toast.LENGTH_SHORT).show();
+                         Toast.makeText(MainActivity.this, "Login unsuccessful, please try again" , Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

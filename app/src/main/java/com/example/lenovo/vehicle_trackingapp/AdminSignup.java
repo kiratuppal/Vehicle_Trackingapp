@@ -84,12 +84,12 @@ public class AdminSignup extends AppCompatActivity {
                 try {
                     if(response.getString("key").equals("1"))
                     {
-                        Toast.makeText(AdminSignup.this , "done" , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminSignup.this , "Registered Successfully" , Toast.LENGTH_SHORT).show();
                     }
 
                     if(response.getString("key").equals("0"))
                     {
-                        Toast.makeText(AdminSignup.this , "email already exist" , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminSignup.this , "email already exists" , Toast.LENGTH_SHORT).show();
 
                     }
                 } catch (JSONException e) {

@@ -3,9 +3,11 @@ package com.example.lenovo.vehicle_trackingapp.adapter;
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lenovo.vehicle_trackingapp.R;
+import com.example.lenovo.vehicle_trackingapp.Viewdriver;
 import com.example.lenovo.vehicle_trackingapp.viewholder.view_holder;
 
 import org.json.JSONArray;
@@ -46,7 +48,7 @@ public class adapter extends RecyclerView.Adapter<view_holder>{
 
         try {
             // iterating for each json object in json array
-            JSONObject job = (JSONObject) jsarr.get(position);
+            final JSONObject job = (JSONObject) jsarr.get(position);
 
             // binding values from json object to cell layout via view holder
             holder.name_id.setText(job.getString("name"));
@@ -55,6 +57,17 @@ public class adapter extends RecyclerView.Adapter<view_holder>{
             holder.age_id.setText(job.getString("age"));
             holder.vehicle_id.setText(job.getString("vehicle_no"));
             holder.admin_id.setText(job.getString("aid"));
+
+            holder.delete_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        Viewdriver.delete_driver(job.getString("driver_id"),a);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
         } catch (JSONException e) {
             e.printStackTrace();
         }

@@ -44,6 +44,7 @@
         android:layout_margin="10dp"
         android:hint="Enter Contact Number"
         android:textColor="#000"
+        android:inputType="number"
         android:padding="10dp"
         android:textColorHint="#000"
         android:id="@+id/editcntc"
@@ -67,17 +68,19 @@
             android:layout_margin="10dp"
             android:textColor="#000"
             android:hint="Enter Your Age"
+            android:inputType="number"
             android:padding="10dp"
             android:id="@+id/urage"
             android:textColorHint="#000"
             />
 
 
-    <EditText android:layout_width="match_parent"
+    <Spinner android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:background="@drawable/shape1"
         android:layout_margin="10dp"
-        android:hint="Enter Vehicle Number"
+
         android:id="@+id/vehinum"
         android:padding="10dp"
         android:textColor="#000"

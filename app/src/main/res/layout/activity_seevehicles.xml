@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_seevehicles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road2"
+    tools:context="com.example.lenovo.vehicle_trackingapp.seevehicles">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6cede02a"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="view_distance">
+
+            <ImageView
+                android:id="@+id/disimage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/distances" />
+
+            <TextView
+                android:id="@+id/distext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="110dp"
+                android:layout_toRightOf="@id/disimage"
+                android:text="Distances"
+
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="view_vehicle">
+
+            <ImageView
+                android:id="@+id/viewimge"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/eye" />
+
+            <TextView
+                android:id="@+id/vehtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/distext"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="43dp"
+                android:layout_toRightOf="@id/viewimge"
+                android:text="View Vehicles"
+                android:textColor="#000"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="add_vehicle">
+
+            <ImageView
+                android:id="@+id/addveh"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehtext"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@id/addveh"
+                android:text="Add Vehicle"
+                android:textColor="#000"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape1"
+            android:text="back" />
+    </LinearLayout>
+</RelativeLayout>

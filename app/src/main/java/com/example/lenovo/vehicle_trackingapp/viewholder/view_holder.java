@@ -2,6 +2,7 @@ package com.example.lenovo.vehicle_trackingapp.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.lenovo.vehicle_trackingapp.R;
@@ -15,6 +16,8 @@ public class view_holder extends RecyclerView.ViewHolder {
 
     public TextView name_id , contnum_id , email_id , age_id , vehicle_id , admin_id ;
 
+    public Button delete_btn ;
+
     public view_holder(View itemView) {
         super(itemView);
 
@@ -27,6 +30,8 @@ public class view_holder extends RecyclerView.ViewHolder {
         age_id = (TextView) itemView.findViewById(R.id.age_id_text);
         vehicle_id = (TextView) itemView.findViewById(R.id.vehicle_id_text);
         admin_id = (TextView) itemView.findViewById(R.id.admin_id_text);
+        delete_btn = (Button) itemView.findViewById(R.id.delete_driver);
+
     }
 }
 

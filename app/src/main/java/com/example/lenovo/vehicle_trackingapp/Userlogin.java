@@ -22,9 +22,17 @@ public class Userlogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_userlogin);
         SharedPreferences sp = getSharedPreferences("driver_info" , MODE_PRIVATE);
-        Intent i = new Intent(Userlogin.this,drivermenu.class);
-        finish();    }
+        if(!sp.getString("driver_id","").equals(""))
+        {
+            Intent i = new Intent(Userlogin.this,drivermenu.class);
+            startActivity(i);
+            finish();
+        }
+
+
+    }
 
 
 
@@ -75,7 +83,7 @@ public class Userlogin extends AppCompatActivity {
                         startActivity(i);
                     }
                     else {
-                        Toast.makeText(Userlogin.this, "Incorrect input" , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Userlogin.this, "Login unsuccessful, please try again" , Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

@@ -52,6 +52,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:hint="Bill No."
+        android:inputType="number"
         android:textSize="20dp"
         android:background="@null"
         android:id="@+id/Bno"
@@ -73,7 +74,8 @@
         android:padding="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:hint="Amount"
+        android:hint="Amount(In Rupees)"
+        android:inputType="number"
         android:textSize="20dp"
         android:background="@null"
         android:id="@+id/amt2"/>
@@ -115,6 +117,8 @@
         android:layout_marginTop="10dp"
         android:hint="Date"
         android:textSize="20dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:background="@null"
         android:id="@+id/date2"/>
 

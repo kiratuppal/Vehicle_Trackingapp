@@ -13,8 +13,8 @@ public class start_page extends AppCompatActivity {
         setContentView(R.layout.activity_start_page);
     }
     public void goto_admin (View v){
-        Intent I = new Intent(start_page.this , MainActivity.class);
-        startActivity(I);
+        Intent i = new Intent(start_page.this , MainActivity.class);
+        startActivity(i);
     }
     public void goto_user (View v){
         Intent I = new Intent(start_page.this , Userlogin.class);
